@@ -1,0 +1,6 @@
+streamlit
+langchain
+chromadb
+ollama
+PyPDF2
+huggingface-hub
