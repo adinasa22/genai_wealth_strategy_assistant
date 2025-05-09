@@ -1,4 +1,4 @@
-# 🧠 GenAI Wealth Portfolio Advisor
+# 🧠 GenAI Wealth Strategy Assistant
 
 An open-source, offline wealth advisory tool built using:
 - 🦙 LLaMA3 (via Ollama)
