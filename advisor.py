@@ -1,6 +1,6 @@
 from langchain.document_loaders import PyPDFLoader
 from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import ChromaDB
+from langchain.vectorstores import Chroma
 from langchain.llms import Ollama
 from langchain.chains import RetrievalQA
 import tempfile
@@ -21,7 +21,7 @@ def get_portfolio_advice(age, goal, risk, files):
     documents = load_documents(files)
     embeddings = HuggingFaceEmbeddings()
     db_path = "./chroma_db"
-    vectorstore = ChromaDB.from_documents(documents, embeddings, persist_directory=db_path)
+    vectorstore = Chroma.from_documents(documents, embeddings, persist_directory=db_path)
     retriever = vectorstore.as_retriever()
     llm = Ollama(model="llama3")
     qa_chain = RetrievalQA.from_chain_type(llm=llm, retriever=retriever)
