@@ -1,9 +1,9 @@
 import streamlit as st
 from advisor import get_portfolio_advice
 
-st.set_page_config(page_title="Wealth Portfolio Advisor", layout="wide")
+st.set_page_config(page_title="Wealth Strategy Assistant", layout="wide")
 
-st.title("💰 GenAI Wealth Portfolio Advisor")
+st.title("💰 GenAI Wealth Strategy Assistant")
 st.markdown("A fully offline, open-source financial advisor powered by LLaMA3, LangChain, and ChromaDB.")
 
 age = st.number_input("Investor Age", min_value=18, max_value=100, value=35)
